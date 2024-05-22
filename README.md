@@ -33,3 +33,5 @@
 	docker restart mongo-bi
 
 	docker restart cubejs
+
+Веб интерфейс системы по умолчанию расположен на [локальном хосте, порт 4000](http://localhost:4000/)
