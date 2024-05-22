@@ -15,13 +15,15 @@
 Можно добавить в базу mongodb *тестовые данные*. 
 Для этого нужно раскомментировать *14 строчку в файле docker-compose.yaml* "./dump:/dump" и выполнить следующие команды:
 
-	docker-compose down
-
 	curl https://cube.dev/downloads/events-dump.zip > events-dump.zip
 
 	unzip events-dump.zip
 
 	docker exec mongo mongorestore dump/stats/events.bson -u root -p admin123
+
+	docker-compose down	
+
+После чего необходимо снова *закомментироват указанную строку* и запустить систему:
 
 	docker-compose up -d
 
